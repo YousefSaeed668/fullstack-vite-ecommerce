@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import AdminLayout from "./ui/AdminlSayout";
+import AdminLayout from "./ui/Adminlayout";
 import Products from "./pages/admin/Products";
 import Home from "./pages/client/Home";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
