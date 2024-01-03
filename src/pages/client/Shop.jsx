@@ -37,7 +37,7 @@ function Shop() {
 
   if (isLoading) return <Spinner />;
   return (
-    <div className="flex ">
+    <div className="flex overflow-x-auto">
       <Filter isOpen={isOpen} />
       <div className={`${styles.container} py-10`}>
         <>
