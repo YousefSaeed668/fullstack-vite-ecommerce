@@ -2,7 +2,7 @@ import OrderTableRow from "./OrderTableRow";
 
 function OrderTable({ orders, type }) {
   return (
-    <table className="w-full">
+    <table className="w-full min-w-[60rem]">
       <thead>
         <tr className="border-y border-primary">
           <td className="font-semibold">Order ID</td>
