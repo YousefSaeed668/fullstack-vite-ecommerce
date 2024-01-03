@@ -34,8 +34,8 @@ function Header() {
             styles.flexcenterV
           } sm:justify-end max-sm:justify-center max-sm:space-y-6  duration-300 ${
             showMenu ? "left-0" : "left-0"
-          } max-sm:z-30 max-sm:w-[10rem]   sm:space-x-1 max-sm:absolute max-sm:h-screen duration-300
-          max-sm:top-0 max-sm:bg-red flex max-sm:flex-col ${
+          } max-sm:z-30 max-sm:w-[15rem]   sm:space-x-1 max-sm:absolute max-sm:h-screen duration-300
+          max-sm:top-0 max-sm:bg-[#f5f5f5] flex max-sm:flex-col ${
             showMenu ? "max-sm:translate-x-0 " : "max-sm:-translate-x-full"
           }  sm:flex  ${user ? "lg:space-x-32" : "lg:space-x-64"} flex-[2]`}
         >
@@ -70,7 +70,7 @@ function Header() {
           </ul>
           <ul
             className={`${styles.flexcenterV} max-sm:space-x-4 space-x-3 ${
-              user ? "space-x-4" : ""
+              user ? "space-x-4 max-sm:flex-col max-sm:gap-y-3" : ""
             }`}
           >
             <li>
