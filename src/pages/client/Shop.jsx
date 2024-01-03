@@ -24,13 +24,13 @@ function Shop() {
   );
   // Pagination States
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(10);
+  const [productsPerPage] = useState(20);
   // Get Current Products
   const indexOfLastProduct = currentPage * productsPerPage;
 
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
 
-  const currentProducts = sortedProducts?.slice(
+  const currentProducts = searchedProducts?.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
@@ -61,13 +61,13 @@ function Shop() {
             <Sort />
           </div>
           <div>
-            {searchedProducts?.length === 0 ? (
+            {currentProducts?.length === 0 ? (
               <h1 className="text-2xl md:text-3xl font-semibold text-center mt-64">
                 No Products Found 🥲
               </h1>
             ) : (
               <div className="flex flex-wrap gap-5 mt-10 justify-center">
-                {searchedProducts?.map((product) => (
+                {currentProducts?.map((product) => (
                   <Card key={product.id} product={product} />
                 ))}
               </div>
