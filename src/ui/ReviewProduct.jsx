@@ -8,6 +8,7 @@ function ReviewProduct({ id }) {
   const [rate, setRate] = useState(0);
   const [review, setReview] = useState("");
   const user = JSON.parse(localStorage.getItem("user"));
+  const userPhotoRep = "http://tinyurl.com/48cc68w8";
   const { setProductReview } = useSetProductReview(id);
   const today = new Date();
   const date = today.toDateString();
@@ -19,8 +20,8 @@ function ReviewProduct({ id }) {
       productId: id,
       rate,
       review,
-      userName: user.displayName,
-      userImage: user.photoURL,
+      userName: user.displayName || user?.email?.split("@")[0],
+      userImage: user.photoURL || userPhotoRep,
       reviewDate: date,
     });
   }
