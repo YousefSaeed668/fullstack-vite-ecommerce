@@ -8,6 +8,7 @@ export function useUpdateUser() {
     mutationFn: updateUserProfileApi,
     onSuccess: (user) => {
       queryClient.setQueryData(["user"], user);
+      localStorage.setItem("user", JSON.stringify(user));
     },
   });
 
