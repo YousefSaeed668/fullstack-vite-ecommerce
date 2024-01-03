@@ -11,14 +11,7 @@ const firebaseConfig = {
   messagingSenderId: import.meta.env.VITE_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: import.meta.env.VITE_APP_FIREBASE_APP_ID,
 };
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCjYwOlCiMckF4nMgPmSg98ADwszGeD5sI",
-//   authDomain: "vite-fullstack-ecommerce.firebaseapp.com",
-//   projectId: "vite-fullstack-ecommerce",
-//   storageBucket: "vite-fullstack-ecommerce.appspot.com",
-//   messagingSenderId: "124476318814",
-//   appId: "1:124476318814:web:af2fbf2543c4f89c4bc0cf",
-// };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
