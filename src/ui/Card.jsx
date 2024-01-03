@@ -28,7 +28,7 @@ function Card({ product }) {
         <img
           src={product.main_image}
           alt=""
-          className="h-[22rem] object-cover"
+          className="h-[22rem] object-cover object-top"
         />
         <span className="absolute text-white group-hover:opacity-100 opacity-0 duration-200 bg-pblack p-3 cursor-pointer bottom-0 right-0">
           <FaPlus />
