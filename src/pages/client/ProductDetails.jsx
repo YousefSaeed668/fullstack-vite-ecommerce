@@ -30,7 +30,7 @@ function ProductDetails() {
       </div>
       <RelatedProducts category={product.product_category} />
       <ProductReviews id={id} product={product} />
-      {isHere && <ReviewProduct id={id} />}
+      {isHere && user ? <ReviewProduct id={id} /> : ""}
     </div>
   );
 }
