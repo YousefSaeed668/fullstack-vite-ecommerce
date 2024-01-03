@@ -11,15 +11,16 @@ function Orders() {
   if (isLoading) return <Spinner />;
   if (!orders?.length) return <Empty type="Orders" />;
   return (
-    <div className={`${styles.container} py-10 min-h-screen overflow-auto`}>
+    <div className={`${styles.container} py-10 min-h-screen `}>
       <h1 className="text-2xl md:text-4xl  font-semibold mb-4 flex text-pblack justify-center items-center gap-2">
         <BsFillBoxFill /> Your Orders
       </h1>
       <h3 className="text-xl md:text-2xl font-semibold mb-7">
         You Have Orderd : {orders.length}
       </h3>
-
+        <div className="overflow-auto">
       <OrderTable orders={orders} />
+        </div>
     </div>
   );
 }
