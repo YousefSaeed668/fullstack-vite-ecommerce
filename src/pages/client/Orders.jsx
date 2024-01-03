@@ -11,7 +11,7 @@ function Orders() {
   if (isLoading) return <Spinner />;
   if (!orders?.length) return <Empty type="Orders" />;
   return (
-    <div className={`${styles.container} py-10 min-h-screen`}>
+    <div className={`${styles.container} py-10 min-h-screen overflow-auto`}>
       <h1 className="text-2xl md:text-4xl  font-semibold mb-4 flex text-pblack justify-center items-center gap-2">
         <BsFillBoxFill /> Your Orders
       </h1>
